@@ -1,0 +1,908 @@
+/* نظام التصميم Roya Modern Soft - مركز رؤية التعليمي */
+/* Design System: Roya Modern Soft - Roya Educational Center */
+
+:root {
+  /* الألوان الأساسية - Primary Colors */
+  --roya-primary-50: #f0f9ff;
+  --roya-primary-100: #e0f2fe;
+  --roya-primary-200: #bae6fd;
+  --roya-primary-300: #7dd3fc;
+  --roya-primary-400: #38bdf8;
+  --roya-primary-500: #0ea5e9;
+  --roya-primary-600: #0284c7;
+  --roya-primary-700: #0369a1;
+  --roya-primary-800: #075985;
+  --roya-primary-900: #0c4a6e;
+  --roya-primary-950: #082f49;
+
+  /* ألوان النجاح - Success Colors */
+  --roya-success-50: #f0fdf4;
+  --roya-success-100: #dcfce7;
+  --roya-success-200: #bbf7d0;
+  --roya-success-300: #86efac;
+  --roya-success-400: #4ade80;
+  --roya-success-500: #22c55e;
+  --roya-success-600: #16a34a;
+  --roya-success-700: #15803d;
+  --roya-success-800: #166534;
+  --roya-success-900: #14532d;
+  --roya-success-950: #052e16;
+
+  /* ألوان التحذير - Warning Colors */
+  --roya-warning-50: #fffbeb;
+  --roya-warning-100: #fef3c7;
+  --roya-warning-200: #fde68a;
+  --roya-warning-300: #fcd34d;
+  --roya-warning-400: #fbbf24;
+  --roya-warning-500: #f59e0b;
+  --roya-warning-600: #d97706;
+  --roya-warning-700: #b45309;
+  --roya-warning-800: #92400e;
+  --roya-warning-900: #78350f;
+  --roya-warning-950: #451a03;
+
+  /* ألوان الخطر - Danger Colors */
+  --roya-danger-50: #fef2f2;
+  --roya-danger-100: #fee2e2;
+  --roya-danger-200: #fecaca;
+  --roya-danger-300: #fca5a5;
+  --roya-danger-400: #f87171;
+  --roya-danger-500: #ef4444;
+  --roya-danger-600: #dc2626;
+  --roya-danger-700: #b91c1c;
+  --roya-danger-800: #991b1b;
+  --roya-danger-900: #7f1d1d;
+  --roya-danger-950: #450a0a;
+
+  /* ألوان الرمادي - Gray Colors */
+  --roya-gray-50: #f9fafb;
+  --roya-gray-100: #f3f4f6;
+  --roya-gray-200: #e5e7eb;
+  --roya-gray-300: #d1d5db;
+  --roya-gray-400: #9ca3af;
+  --roya-gray-500: #6b7280;
+  --roya-gray-600: #4b5563;
+  --roya-gray-700: #374151;
+  --roya-gray-800: #1f2937;
+  --roya-gray-900: #111827;
+  --roya-gray-950: #030712;
+
+  /* ألوان خاصة بالتعليم - Educational Colors */
+  --roya-education-50: #fefce8;
+  --roya-education-100: #fef9c3;
+  --roya-education-200: #fef08a;
+  --roya-education-300: #fde047;
+  --roya-education-400: #facc15;
+  --roya-education-500: #eab308;
+  --roya-education-600: #ca8a04;
+  --roya-education-700: #a16207;
+  --roya-education-800: #854d0e;
+  --roya-education-900: #713f12;
+  --roya-education-950: #422006;
+
+  /* متغيرات الألوان الرئيسية - Main Color Variables */
+  --roya-primary: var(--roya-primary-600);
+  --roya-primary-hover: var(--roya-primary-700);
+  --roya-primary-light: var(--roya-primary-100);
+  --roya-primary-dark: var(--roya-primary-800);
+
+  --roya-success: var(--roya-success-500);
+  --roya-success-hover: var(--roya-success-600);
+  --roya-success-light: var(--roya-success-100);
+
+  --roya-warning: var(--roya-warning-500);
+  --roya-warning-hover: var(--roya-warning-600);
+  --roya-warning-light: var(--roya-warning-100);
+
+  --roya-danger: var(--roya-danger-500);
+  --roya-danger-hover: var(--roya-danger-600);
+  --roya-danger-light: var(--roya-danger-100);
+
+  --roya-gray: var(--roya-gray-500);
+  --roya-gray-light: var(--roya-gray-100);
+  --roya-gray-dark: var(--roya-gray-800);
+
+  /* الخطوط - Typography */
+  --roya-font-family-primary: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --roya-font-family-secondary: 'Amiri', 'Times New Roman', serif;
+  --roya-font-family-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* أحجام الخطوط - Font Sizes */
+  --roya-text-xs: 0.75rem;    /* 12px */
+  --roya-text-sm: 0.875rem;   /* 14px */
+  --roya-text-base: 1rem;     /* 16px */
+  --roya-text-lg: 1.125rem;   /* 18px */
+  --roya-text-xl: 1.25rem;    /* 20px */
+  --roya-text-2xl: 1.5rem;    /* 24px */
+  --roya-text-3xl: 1.875rem;  /* 30px */
+  --roya-text-4xl: 2.25rem;   /* 36px */
+  --roya-text-5xl: 3rem;      /* 48px */
+  --roya-text-6xl: 3.75rem;   /* 60px */
+
+  /* أوزان الخطوط - Font Weights */
+  --roya-font-light: 300;
+  --roya-font-normal: 400;
+  --roya-font-medium: 500;
+  --roya-font-semibold: 600;
+  --roya-font-bold: 700;
+  --roya-font-extrabold: 800;
+  --roya-font-black: 900;
+
+  /* مسافات - Spacing */
+  --roya-space-1: 0.25rem;   /* 4px */
+  --roya-space-2: 0.5rem;    /* 8px */
+  --roya-space-3: 0.75rem;   /* 12px */
+  --roya-space-4: 1rem;      /* 16px */
+  --roya-space-5: 1.25rem;   /* 20px */
+  --roya-space-6: 1.5rem;    /* 24px */
+  --roya-space-8: 2rem;      /* 32px */
+  --roya-space-10: 2.5rem;   /* 40px */
+  --roya-space-12: 3rem;     /* 48px */
+  --roya-space-16: 4rem;     /* 64px */
+  --roya-space-20: 5rem;     /* 80px */
+  --roya-space-24: 6rem;     /* 96px */
+  --roya-space-32: 8rem;     /* 128px */
+
+  /* نصف القطر - Border Radius */
+  --roya-radius-none: 0;
+  --roya-radius-sm: 0.125rem;   /* 2px */
+  --roya-radius-base: 0.25rem;  /* 4px */
+  --roya-radius-md: 0.375rem;   /* 6px */
+  --roya-radius-lg: 0.5rem;     /* 8px */
+  --roya-radius-xl: 0.75rem;    /* 12px */
+  --roya-radius-2xl: 1rem;      /* 16px */
+  --roya-radius-3xl: 1.5rem;    /* 24px */
+  --roya-radius-full: 9999px;
+
+  /* الظلال - Shadows */
+  --roya-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --roya-shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --roya-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --roya-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --roya-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --roya-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --roya-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+  /* الانتقالات - Transitions */
+  --roya-transition-fast: 150ms ease-in-out;
+  --roya-transition-base: 250ms ease-in-out;
+  --roya-transition-slow: 350ms ease-in-out;
+
+  /* نقاط التوقف - Breakpoints */
+  --roya-breakpoint-sm: 640px;
+  --roya-breakpoint-md: 768px;
+  --roya-breakpoint-lg: 1024px;
+  --roya-breakpoint-xl: 1280px;
+  --roya-breakpoint-2xl: 1536px;
+
+  /* Z-Index */
+  --roya-z-dropdown: 1000;
+  --roya-z-sticky: 1020;
+  --roya-z-fixed: 1030;
+  --roya-z-modal-backdrop: 1040;
+  --roya-z-modal: 1050;
+  --roya-z-popover: 1060;
+  --roya-z-tooltip: 1070;
+  --roya-z-toast: 1080;
+}
+
+/* إعادة تعيين الأساسيات - Base Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--roya-font-family-primary);
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  direction: rtl;
+  text-align: right;
+}
+
+body {
+  font-family: var(--roya-font-family-primary);
+  font-size: var(--roya-text-base);
+  font-weight: var(--roya-font-normal);
+  line-height: 1.6;
+  color: var(--roya-gray-900);
+  background-color: var(--roya-gray-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
+  text-align: right;
+}
+
+/* الروابط - Links */
+a {
+  color: var(--roya-primary-600);
+  text-decoration: none;
+  transition: color var(--roya-transition-fast);
+}
+
+a:hover {
+  color: var(--roya-primary-700);
+}
+
+a:focus {
+  outline: 2px solid var(--roya-primary-500);
+  outline-offset: 2px;
+}
+
+/* الأزرار - Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--roya-space-2);
+  padding: var(--roya-space-3) var(--roya-space-6);
+  font-family: var(--roya-font-family-primary);
+  font-size: var(--roya-text-sm);
+  font-weight: var(--roya-font-medium);
+  line-height: 1.5;
+  border: 1px solid transparent;
+  border-radius: var(--roya-radius-lg);
+  cursor: pointer;
+  transition: all var(--roya-transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 0.5);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* أنماط الأزرار المختلفة - Button Variants */
+.btn-primary {
+  background-color: var(--roya-primary-600);
+  border-color: var(--roya-primary-600);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--roya-primary-700);
+  border-color: var(--roya-primary-700);
+}
+
+.btn-secondary {
+  background-color: var(--roya-gray-100);
+  border-color: var(--roya-gray-300);
+  color: var(--roya-gray-700);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--roya-gray-200);
+  border-color: var(--roya-gray-400);
+}
+
+.btn-success {
+  background-color: var(--roya-success-500);
+  border-color: var(--roya-success-500);
+  color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+  background-color: var(--roya-success-600);
+  border-color: var(--roya-success-600);
+}
+
+.btn-warning {
+  background-color: var(--roya-warning-500);
+  border-color: var(--roya-warning-500);
+  color: white;
+}
+
+.btn-warning:hover:not(:disabled) {
+  background-color: var(--roya-warning-600);
+  border-color: var(--roya-warning-600);
+}
+
+.btn-danger {
+  background-color: var(--roya-danger-500);
+  border-color: var(--roya-danger-500);
+  color: white;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: var(--roya-danger-600);
+  border-color: var(--roya-danger-600);
+}
+
+/* أحجام الأزرار - Button Sizes */
+.btn-sm {
+  padding: var(--roya-space-2) var(--roya-space-4);
+  font-size: var(--roya-text-xs);
+}
+
+.btn-lg {
+  padding: var(--roya-space-4) var(--roya-space-8);
+  font-size: var(--roya-text-base);
+}
+
+.btn-xl {
+  padding: var(--roya-space-5) var(--roya-space-10);
+  font-size: var(--roya-text-lg);
+}
+
+/* البطاقات - Cards */
+.card {
+  background-color: white;
+  border-radius: var(--roya-radius-xl);
+  box-shadow: var(--roya-shadow-base);
+  overflow: hidden;
+  transition: box-shadow var(--roya-transition-fast);
+}
+
+.card:hover {
+  box-shadow: var(--roya-shadow-lg);
+}
+
+.card-header {
+  padding: var(--roya-space-6);
+  border-bottom: 1px solid var(--roya-gray-200);
+}
+
+.card-body {
+  padding: var(--roya-space-6);
+}
+
+.card-footer {
+  padding: var(--roya-space-6);
+  border-top: 1px solid var(--roya-gray-200);
+  background-color: var(--roya-gray-50);
+}
+
+/* النماذج - Forms */
+.form-group {
+  margin-bottom: var(--roya-space-6);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--roya-space-2);
+  font-size: var(--roya-text-sm);
+  font-weight: var(--roya-font-medium);
+  color: var(--roya-gray-700);
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: var(--roya-space-3) var(--roya-space-4);
+  font-family: var(--roya-font-family-primary);
+  font-size: var(--roya-text-base);
+  line-height: 1.5;
+  color: var(--roya-gray-900);
+  background-color: white;
+  border: 1px solid var(--roya-gray-300);
+  border-radius: var(--roya-radius-lg);
+  transition: border-color var(--roya-transition-fast), box-shadow var(--roya-transition-fast);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--roya-primary-500);
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 0.1);
+}
+
+.form-input:disabled {
+  background-color: var(--roya-gray-100);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-input.error {
+  border-color: var(--roya-danger-500);
+}
+
+.form-input.error:focus {
+  border-color: var(--roya-danger-500);
+  box-shadow: 0 0 0 3px rgb(239 68 68 / 0.1);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: left var(--roya-space-3) center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-left: var(--roya-space-10);
+}
+
+/* رسائل التحقق - Validation Messages */
+.form-error {
+  margin-top: var(--roya-space-2);
+  font-size: var(--roya-text-sm);
+  color: var(--roya-danger-600);
+}
+
+.form-success {
+  margin-top: var(--roya-space-2);
+  font-size: var(--roya-text-sm);
+  color: var(--roya-success-600);
+}
+
+/* الشارات - Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--roya-space-1) var(--roya-space-3);
+  font-size: var(--roya-text-xs);
+  font-weight: var(--roya-font-semibold);
+  border-radius: var(--roya-radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-primary {
+  background-color: var(--roya-primary-100);
+  color: var(--roya-primary-800);
+}
+
+.badge-success {
+  background-color: var(--roya-success-100);
+  color: var(--roya-success-800);
+}
+
+.badge-warning {
+  background-color: var(--roya-warning-100);
+  color: var(--roya-warning-800);
+}
+
+.badge-danger {
+  background-color: var(--roya-danger-100);
+  color: var(--roya-danger-800);
+}
+
+/* التنبيهات - Alerts */
+.alert {
+  padding: var(--roya-space-4) var(--roya-space-6);
+  border-radius: var(--roya-radius-lg);
+  border: 1px solid transparent;
+  margin-bottom: var(--roya-space-4);
+}
+
+.alert-info {
+  background-color: var(--roya-primary-50);
+  border-color: var(--roya-primary-200);
+  color: var(--roya-primary-800);
+}
+
+.alert-success {
+  background-color: var(--roya-success-50);
+  border-color: var(--roya-success-200);
+  color: var(--roya-success-800);
+}
+
+.alert-warning {
+  background-color: var(--roya-warning-50);
+  border-color: var(--roya-warning-200);
+  color: var(--roya-warning-800);
+}
+
+.alert-danger {
+  background-color: var(--roya-danger-50);
+  border-color: var(--roya-danger-200);
+  color: var(--roya-danger-800);
+}
+
+/* الجداول - Tables */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: var(--roya-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--roya-shadow-base);
+}
+
+.table th,
+.table td {
+  padding: var(--roya-space-4) var(--roya-space-6);
+  text-align: right;
+  border-bottom: 1px solid var(--roya-gray-200);
+}
+
+.table th {
+  background-color: var(--roya-gray-50);
+  font-weight: var(--roya-font-semibold);
+  color: var(--roya-gray-900);
+}
+
+.table tbody tr:hover {
+  background-color: var(--roya-gray-50);
+}
+
+/* التبويبات - Tabs */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--roya-gray-200);
+  background-color: white;
+  border-radius: var(--roya-radius-lg) var(--roya-radius-lg) 0 0;
+}
+
+.tab-button {
+  padding: var(--roya-space-3) var(--roya-space-6);
+  font-size: var(--roya-text-sm);
+  font-weight: var(--roya-font-medium);
+  color: var(--roya-gray-600);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all var(--roya-transition-fast);
+}
+
+.tab-button:hover {
+  color: var(--roya-gray-900);
+  background-color: var(--roya-gray-50);
+}
+
+.tab-button.active {
+  color: var(--roya-primary-600);
+  border-bottom-color: var(--roya-primary-600);
+  background-color: var(--roya-primary-50);
+}
+
+.tab-content {
+  background-color: white;
+  border-radius: 0 0 var(--roya-radius-lg) var(--roya-radius-lg);
+  padding: var(--roya-space-6);
+}
+
+/* التقدم - Progress */
+.progress {
+  width: 100%;
+  height: var(--roya-space-2);
+  background-color: var(--roya-gray-200);
+  border-radius: var(--roya-radius-full);
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--roya-primary-500), var(--roya-primary-600));
+  border-radius: var(--roya-radius-full);
+  transition: width var(--roya-transition-base);
+}
+
+/* التحميل - Loading */
+.loading-spinner {
+  display: inline-block;
+  width: var(--roya-space-6);
+  height: var(--roya-space-6);
+  border: 2px solid var(--roya-gray-200);
+  border-radius: 50%;
+  border-top-color: var(--roya-primary-600);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* الوضع المظلم - Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --roya-gray-50: #111827;
+    --roya-gray-100: #1f2937;
+    --roya-gray-200: #374151;
+    --roya-gray-300: #4b5563;
+    --roya-gray-400: #6b7280;
+    --roya-gray-500: #9ca3af;
+    --roya-gray-600: #d1d5db;
+    --roya-gray-700: #e5e7eb;
+    --roya-gray-800: #f3f4f6;
+    --roya-gray-900: #f9fafb;
+  }
+
+  body {
+    background-color: var(--roya-gray-900);
+    color: var(--roya-gray-100);
+  }
+
+  .card {
+    background-color: var(--roya-gray-800);
+  }
+
+  .table {
+    background-color: var(--roya-gray-800);
+  }
+
+  .table th {
+    background-color: var(--roya-gray-700);
+    color: var(--roya-gray-200);
+  }
+
+  .table tbody tr:hover {
+    background-color: var(--roya-gray-700);
+  }
+}
+
+/* الطباعة - Print Styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .btn,
+  .loading-spinner {
+    display: none !important;
+  }
+
+  .card {
+    border: 1px solid #000 !important;
+    margin: 0 !important;
+  }
+
+  .table {
+    border-collapse: collapse !important;
+  }
+
+  .table th,
+  .table td {
+    border: 1px solid #000 !important;
+  }
+}
+
+/* الرسوم المتحركة - Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* فئات الرسوم المتحركة - Animation Classes */
+.animate-fade-in {
+  animation: fadeIn var(--roya-transition-base) ease-in-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight var(--roya-transition-base) ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft var(--roya-transition-base) ease-out;
+}
+
+.animate-bounce-in {
+  animation: bounceIn var(--roya-transition-slow) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* الاستجابة - Responsive Design */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--roya-space-4);
+  padding-right: var(--roya-space-4);
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: var(--roya-space-6);
+    padding-right: var(--roya-space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-left: var(--roya-space-8);
+    padding-right: var(--roya-space-8);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+/* الشبكة - Grid System */
+.grid {
+  display: grid;
+  gap: var(--roya-space-6);
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* المرونة - Flexbox Utilities */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+/* المساحات - Spacing Utilities */
+.m-0 { margin: 0; }
+.m-1 { margin: var(--roya-space-1); }
+.m-2 { margin: var(--roya-space-2); }
+.m-3 { margin: var(--roya-space-3); }
+.m-4 { margin: var(--roya-space-4); }
+.m-5 { margin: var(--roya-space-5); }
+.m-6 { margin: var(--roya-space-6); }
+.m-8 { margin: var(--roya-space-8); }
+
+.p-0 { padding: 0; }
+.p-1 { padding: var(--roya-space-1); }
+.p-2 { padding: var(--roya-space-2); }
+.p-3 { padding: var(--roya-space-3); }
+.p-4 { padding: var(--roya-space-4); }
+.p-5 { padding: var(--roya-space-5); }
+.p-6 { padding: var(--roya-space-6); }
+.p-8 { padding: var(--roya-space-8); }
+
+/* النصوص - Text Utilities */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.text-xs { font-size: var(--roya-text-xs); }
+.text-sm { font-size: var(--roya-text-sm); }
+.text-base { font-size: var(--roya-text-base); }
+.text-lg { font-size: var(--roya-text-lg); }
+.text-xl { font-size: var(--roya-text-xl); }
+.text-2xl { font-size: var(--roya-text-2xl); }
+.text-3xl { font-size: var(--roya-text-3xl); }
+
+.font-light { font-weight: var(--roya-font-light); }
+.font-normal { font-weight: var(--roya-font-normal); }
+.font-medium { font-weight: var(--roya-font-medium); }
+.font-semibold { font-weight: var(--roya-font-semibold); }
+.font-bold { font-weight: var(--roya-font-bold); }
+
+.text-primary { color: var(--roya-primary-600); }
+.text-success { color: var(--roya-success-600); }
+.text-warning { color: var(--roya-warning-600); }
+.text-danger { color: var(--roya-danger-600); }
+.text-gray { color: var(--roya-gray-600); }
+.text-gray-dark { color: var(--roya-gray-900); }
