@@ -9,7 +9,7 @@ import { createServer } from 'http';
 import { Server } from 'socket.io';
 
 // استيراد الإعدادات والأدوات
-import connectDB from './config/database';
+import { testConnection } from './config/database';
 import { errorHandler } from './middleware/errorHandler';
 import { notFound } from './middleware/notFound';
 import { requestLogger } from './middleware/requestLogger';
@@ -41,8 +41,8 @@ export const io = new Server(server, {
   }
 });
 
-// الاتصال بقاعدة البيانات
-connectDB();
+// اختبار الاتصال بقاعدة البيانات
+testConnection();
 
 // إعدادات الأمان والحماية
 app.use(helmet({

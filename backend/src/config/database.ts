@@ -1,42 +1,41 @@
-import mongoose from 'mongoose';
+import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
 
 dotenv.config();
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/roya-educational-center';
+const supabaseUrl = process.env.SUPABASE_URL || '';
+const supabaseKey = process.env.SUPABASE_ANON_KEY || '';
 
-export const connectDB = async (): Promise<void> => {
+if (!supabaseUrl || !supabaseKey) {
+  throw new Error('متغيرات البيئة SUPABASE_URL و SUPABASE_ANON_KEY مطلوبة');
+}
+
+export const supabase = createClient(supabaseUrl, supabaseKey, {
+  auth: {
+    autoRefreshToken: true,
+    persistSession: true,
+    detectSessionInUrl: true
+  }
+});
+
+console.log('✅ تم إعداد Supabase بنجاح');
+
+// اختبار الاتصال
+export const testConnection = async (): Promise<boolean> => {
   try {
-    const conn = await mongoose.connect(MONGODB_URI, {
-      // إعدادات MongoDB الحديثة
-      serverSelectionTimeoutMS: 5000,
-      socketTimeoutMS: 45000,
-      bufferCommands: false,
-      bufferMaxEntries: 0,
-    });
+    const { data, error } = await supabase.from('users').select('count').limit(1);
 
-    console.log(`✅ MongoDB متصل: ${conn.connection.host}`);
+    if (error && error.code !== 'PGRST116') { // PGRST116 = table doesn't exist (which is normal for new projects)
+      console.error('❌ خطأ في الاتصال بـ Supabase:', error);
+      return false;
+    }
 
-    // مراقبة حالة الاتصال
-    mongoose.connection.on('error', (err) => {
-      console.error('❌ خطأ في اتصال MongoDB:', err);
-    });
-
-    mongoose.connection.on('disconnected', () => {
-      console.log('⚠️ MongoDB انقطع الاتصال');
-    });
-
-    // إغلاق الاتصال بناءً على إشارات النظام
-    process.on('SIGINT', async () => {
-      await mongoose.connection.close();
-      console.log('🔄 تم إغلاق اتصال MongoDB');
-      process.exit(0);
-    });
-
+    console.log('✅ تم الاتصال بقاعدة البيانات Supabase بنجاح');
+    return true;
   } catch (error) {
-    console.error('❌ فشل في الاتصال بـ MongoDB:', error);
-    process.exit(1);
+    console.error('❌ فشل في الاتصال بقاعدة البيانات:', error);
+    return false;
   }
 };
 
-export default connectDB;
+export default supabase;
